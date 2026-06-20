@@ -1,975 +1,783 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mainak Saha | Assistant Professor &amp; PhD Scholar · AI &amp; Computer Vision</title>
+    <title>Mainak Saha | Assistant Professor &amp; PhD Scholar · NIT Agartala</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Official academic portfolio of Mainak Saha, Assistant Professor (CSE) &amp; PhD Scholar at NIT Agartala. Specializing in AI, Machine Learning, Computer Vision, and Deep Learning.">
-    <meta name="keywords" content="Mainak Saha, Assistant Professor, PhD Scholar, NIT Agartala, CSE, AI, Machine Learning, Deep Learning, Computer Vision, Publications, Patent">
+    <meta name="description" content="Academic homepage of Mainak Saha — Assistant Professor (CSE) and PhD Scholar at NIT Agartala, specializing in AI, Machine Learning, Computer Vision, and Deep Learning.">
+    <meta name="keywords" content="Mainak Saha, Assistant Professor, PhD Scholar, NIT Agartala, Computer Science, AI, Machine Learning, Computer Vision, Deep Learning, Publications">
     <meta name="author" content="Mainak Saha">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Mainak Saha | Assistant Professor &amp; PhD Scholar (CSE)">
-    <meta property="og:description" content="Official academic portfolio of Mainak Saha, specializing in AI, Machine Learning, and Computer Vision.">
+    <meta property="og:title" content="Mainak Saha | Assistant Professor &amp; PhD Scholar">
+    <meta property="og:description" content="Academic homepage of Mainak Saha, specializing in AI, Machine Learning, and Computer Vision.">
     <meta property="og:image" content="./profile.jpg">
-    <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter + Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<!-- ============================================
-     TOP INSTITUTION HEADER BANNER
-============================================ -->
-<div class="institution-banner" id="institution-banner">
-    <div class="inst-inner">
-        <div class="inst-logo-area">
-            <!-- NIT Agartala emblem placeholder (SVG) -->
-            <div class="inst-emblem">
-                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2" fill="none"/>
-                    <circle cx="30" cy="30" r="22" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-                    <text x="30" y="26" text-anchor="middle" fill="white" font-size="9" font-weight="bold" font-family="serif">NIT</text>
-                    <text x="30" y="36" text-anchor="middle" fill="white" font-size="6" font-family="serif">AGARTALA</text>
-                    <path d="M12 44 Q30 50 48 44" stroke="white" stroke-width="1" fill="none" opacity="0.6"/>
-                </svg>
-            </div>
-        </div>
-        <div class="inst-text-area">
-            <h1 class="inst-name">Mainak Saha</h1>
-            <p class="inst-title">Assistant Professor · Computer Science &amp; Engineering</p>
-            <p class="inst-affil">Techno College of Engineering Agartala &nbsp;|&nbsp; PhD Scholar · National Institute of Technology Agartala</p>
-        </div>
-        <div class="inst-actions">
-            <button class="theme-toggle-btn" id="theme-toggle" title="Toggle theme">
-                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </button>
+<!-- =====================
+     TOP BAR
+===================== -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="top-bar-brand">NIT Agartala &mdash; Department of Computer Science &amp; Engineering</span>
+        <div class="top-bar-links">
+            <a href="https://orcid.org/0009-0001-1748-0317" target="_blank">ORCID</a>
+            <a href="https://linkedin.com/in/mainak--saha/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/mainakagt97" target="_blank">GitHub</a>
+            <a href="./Mainak_Saha_Resume.pdf" download>Download CV</a>
         </div>
     </div>
 </div>
 
-<!-- ============================================
-     STICKY NAVIGATION BAR
-============================================ -->
-<nav class="main-nav" id="main-nav">
+<!-- =====================
+     STICKY NAV
+===================== -->
+<nav class="site-nav" id="site-nav">
     <div class="nav-inner">
-        <a href="#" class="nav-brand">Mainak Saha</a>
-        <div class="nav-links" id="nav-menu">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#research" class="nav-link">Research</a>
-            <a href="#publications" class="nav-link">Publications</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#service" class="nav-link">Service</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <a href="#top" class="nav-logo">Mainak Saha</a>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
     </div>
 </nav>
 
-<!-- ============================================
-     MAIN CONTENT LAYOUT
-============================================ -->
-<div class="page-wrapper">
-
-    <!-- ========================================
-         LEFT SIDEBAR (Sticky Profile Card)
-    ======================================== -->
-    <aside class="sidebar" id="sidebar">
-
-        <!-- Profile Photo -->
-        <div class="profile-photo-wrap">
-            <div class="profile-ring"></div>
-            <img src="./profile.jpg" alt="Mainak Saha" class="profile-photo" id="profile-photo">
-            <div class="profile-status-dot"></div>
-        </div>
-
-        <!-- Name + Title -->
-        <div class="sidebar-name">
-            <h2>Mainak Saha</h2>
-            <p class="sidebar-position">Assistant Professor &amp; PhD Scholar</p>
-            <p class="sidebar-dept">Dept. of Computer Science &amp; Engineering</p>
-        </div>
-
-        <!-- Quick Stats -->
-        <div class="sidebar-stats">
-            <div class="sstat">
-                <span class="sstat-num" data-val="15">0</span>
-                <span class="sstat-label">Publications</span>
+<!-- =====================
+     HERO / HEADER
+===================== -->
+<header class="hero" id="top">
+    <div class="hero-inner">
+        <div class="hero-photo-col">
+            <div class="photo-frame">
+                <img src="./profile.jpg" alt="Mainak Saha" class="hero-photo">
             </div>
-            <div class="sstat">
-                <span class="sstat-num" data-val="4">0</span>
-                <span class="sstat-label">Yrs Teaching</span>
-            </div>
-            <div class="sstat">
-                <span class="sstat-num" data-val="1">0</span>
-                <span class="sstat-label">Patent</span>
+            <!-- Quick Links -->
+            <div class="hero-icon-links">
+                <a href="https://orcid.org/0009-0001-1748-0317" target="_blank" class="icon-link orcid-il" title="ORCID">
+                    <span class="orcid-id">iD</span>
+                </a>
+                <a href="https://linkedin.com/in/mainak--saha/" target="_blank" class="icon-link" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/mainakagt97" target="_blank" class="icon-link" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a href="mailto:mainaksaha6309@gmail.com" class="icon-link" title="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
             </div>
         </div>
 
-        <!-- Contact Info -->
-        <div class="sidebar-contact">
-            <h3 class="sidebar-section-title">Contact</h3>
-            <a href="mailto:mainaksaha6309@gmail.com" class="contact-row">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span>mainaksaha6309@gmail.com</span>
-            </a>
-            <a href="tel:+919732256480" class="contact-row">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.18 6.18l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>+91 97322 56480</span>
-            </a>
-            <div class="contact-row location-row">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Agartala, Tripura, India</span>
+        <div class="hero-text-col">
+            <h1 class="hero-name">Mainak Saha</h1>
+            <p class="hero-title-line">Assistant Professor &amp; PhD Scholar</p>
+            <p class="hero-dept">Department of Computer Science &amp; Engineering</p>
+            <p class="hero-inst">
+                <a href="#" class="inst-link">Techno College of Engineering Agartala</a>
+                &nbsp;&amp;&nbsp;
+                <a href="#" class="inst-link">National Institute of Technology Agartala</a>
+            </p>
+
+            <div class="hero-divider"></div>
+
+            <p class="hero-bio">
+                I am an <strong>Assistant Professor</strong> in CSE at Techno College of Engineering Agartala (TCEA) and a <strong>PhD Scholar</strong> at NIT Agartala. My research focuses on <strong>Deep Learning, Computer Vision, Deepfake Detection,</strong> and <strong>Medical Image Analysis</strong>. I have authored 15+ peer-reviewed publications in IEEE, CRC Press, and international journals, hold a <strong>granted Indian patent</strong>, and co-authored a <strong>Machine Learning textbook</strong>.
+            </p>
+
+            <div class="hero-tags">
+                <span>AI &amp; Machine Learning</span>
+                <span>Computer Vision</span>
+                <span>Deep Learning</span>
+                <span>Deepfake Detection</span>
+                <span>Medical Imaging</span>
+                <span>IoT &amp; Edge AI</span>
+            </div>
+
+            <div class="hero-meta-row">
+                <div class="meta-item">
+                    <span class="meta-num" data-val="15">0</span>
+                    <span class="meta-label">Publications</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-num" data-val="4">0</span>
+                    <span class="meta-label">Years Teaching</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-num" data-val="1">0</span>
+                    <span class="meta-label">Granted Patent</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-num" data-val="1">0</span>
+                    <span class="meta-label">Authored Book</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="./Mainak_Saha_Resume.pdf" download class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Curriculum Vitae
+                </a>
+                <a href="#publications" class="btn-outline">View Publications</a>
+                <a href="#contact" class="btn-outline">Contact Me</a>
             </div>
         </div>
+    </div>
+</header>
 
-        <!-- External Links -->
-        <div class="sidebar-links">
-            <h3 class="sidebar-section-title">Profiles</h3>
-            <a href="https://orcid.org/0009-0001-1748-0317" target="_blank" class="ext-link orcid-link">
-                <span class="ext-badge orcid-badge">iD</span>
-                ORCID
-            </a>
-            <a href="https://linkedin.com/in/mainak--saha/" target="_blank" class="ext-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                LinkedIn
-            </a>
-            <a href="https://github.com/mainakagt97" target="_blank" class="ext-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                GitHub
-            </a>
-        </div>
+<!-- =====================
+     MAIN TWO-COL LAYOUT
+===================== -->
+<div class="layout-wrapper">
 
-        <!-- Download CV -->
-        <a href="./Mainak_Saha_Resume.pdf" download class="sidebar-cv-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Full CV
-        </a>
+    <!-- LEFT COLUMN (News + Affiliations) -->
+    <aside class="left-col">
 
-        <!-- DOB / ORCID info -->
-        <div class="sidebar-meta">
-            <p><strong>DOB:</strong> 28 December 1997</p>
-            <p><strong>ORCID:</strong> 0009-0001-1748-0317</p>
-        </div>
+        <!-- News & Updates -->
+        <section class="aside-block" id="news">
+            <h3 class="aside-heading">
+                <span class="live-pulse"></span>
+                News &amp; Updates
+            </h3>
+            <div class="news-scroll-wrap">
+                <div class="news-track" id="news-track">
+                    <div class="news-row">
+                        <span class="news-date">Feb 2026</span>
+                        <p>Coordinated the <strong>Prayukti 2026 Techfest</strong> at Techno College of Engineering Agartala.</p>
+                    </div>
+                    <div class="news-row">
+                        <span class="news-date">2025</span>
+                        <p>Two papers accepted at the <strong>4th International Conference on Advanced Communications and Machine Intelligence (MICA 2025)</strong>.</p>
+                    </div>
+                    <div class="news-row">
+                        <span class="news-date">Jan 2025</span>
+                        <p>🏆 <strong>Patent Granted</strong> &mdash; "Learning Disability Detecting AI Device" (No. 438185-001), India.</p>
+                    </div>
+                    <div class="news-row">
+                        <span class="news-date">2025</span>
+                        <p>Co-authored textbook <strong>"Machine Learning"</strong> published by Aryan Publishing House (ISBN 9788198761934).</p>
+                    </div>
+                    <div class="news-row">
+                        <span class="news-date">Jul 2025</span>
+                        <p>Presented research on <strong>Vision Transformers in Lung Cancer Detection</strong> at IEEE ICCCNT 2025, IIT Indore.</p>
+                    </div>
+                    <div class="news-row">
+                        <span class="news-date">2024</span>
+                        <p>Joined as <strong>PhD Scholar</strong> at National Institute of Technology Agartala (NIT Agartala).</p>
+                    </div>
+                    <div class="news-row">
+                        <span class="news-date">2024</span>
+                        <p>Organized <strong>Impactech 2K24</strong> National Hackathon at K L University, Hyderabad.</p>
+                    </div>
+                    <div class="news-row">
+                        <span class="news-date">2023</span>
+                        <p>🥇 <strong>Best Paper Award</strong> at ICACIA-2023, K L University for work on Deepfake Detection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Affiliations -->
+        <section class="aside-block" id="affiliations">
+            <h3 class="aside-heading">Affiliations</h3>
+            <div class="affil-list">
+                <div class="affil-item current">
+                    <div class="affil-dot"></div>
+                    <div>
+                        <p class="affil-org">NIT Agartala</p>
+                        <p class="affil-role">PhD Scholar, CSE</p>
+                        <p class="affil-period">2024 – Present</p>
+                    </div>
+                </div>
+                <div class="affil-item current">
+                    <div class="affil-dot"></div>
+                    <div>
+                        <p class="affil-org">Techno College of Engg. Agartala</p>
+                        <p class="affil-role">Assistant Professor, CSE</p>
+                        <p class="affil-period">2025 – Present</p>
+                    </div>
+                </div>
+                <div class="affil-item">
+                    <div class="affil-dot"></div>
+                    <div>
+                        <p class="affil-org">ICFAI University Tripura</p>
+                        <p class="affil-role">Visiting Professor, CSE</p>
+                        <p class="affil-period">2024 – 2025</p>
+                    </div>
+                </div>
+                <div class="affil-item">
+                    <div class="affil-dot"></div>
+                    <div>
+                        <p class="affil-org">K L University, Hyderabad</p>
+                        <p class="affil-role">Assistant Professor, CSE</p>
+                        <p class="affil-period">2023 – 2024</p>
+                    </div>
+                </div>
+                <div class="affil-item">
+                    <div class="affil-dot"></div>
+                    <div>
+                        <p class="affil-org">K J Institute of Engg. &amp; Tech, Gujarat</p>
+                        <p class="affil-role">Assistant Professor, CSE</p>
+                        <p class="affil-period">2022 – 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Card -->
+        <section class="aside-block">
+            <h3 class="aside-heading">Contact</h3>
+            <div class="contact-list">
+                <a href="mailto:mainaksaha6309@gmail.com" class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    mainaksaha6309@gmail.com
+                </a>
+                <a href="tel:+919732256480" class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.18 6.18l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +91 97322 56480
+                </a>
+                <div class="contact-item no-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Agartala, Tripura 799004, India
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="aside-block">
+            <h3 class="aside-heading">Education</h3>
+            <div class="edu-list">
+                <div class="edu-item">
+                    <p class="edu-deg">PhD — Computer Science &amp; Engineering</p>
+                    <p class="edu-inst">NIT Agartala <span class="edu-year">2024 – Ongoing</span></p>
+                </div>
+                <div class="edu-item">
+                    <p class="edu-deg">M.Tech — Computer Science &amp; Engineering</p>
+                    <p class="edu-inst">Tripura University <span class="edu-year">2022</span></p>
+                </div>
+                <div class="edu-item">
+                    <p class="edu-deg">B.Tech — Computer Science &amp; Engineering</p>
+                    <p class="edu-inst">Tripura University <span class="edu-year">2020</span></p>
+                </div>
+            </div>
+        </section>
+
     </aside>
 
-    <!-- ========================================
-         MAIN CONTENT AREA
-    ======================================== -->
-    <main class="main-content">
+    <!-- RIGHT COLUMN (Main Content) -->
+    <main class="right-col">
 
-        <!-- ====== ABOUT / BIO ====== -->
-        <section class="content-section" id="about">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-line"></div>
+        <!-- ===== RESEARCH INTERESTS ===== -->
+        <section class="main-section" id="research">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="research-tags">
+                <span class="rtag">Computer Vision</span>
+                <span class="rtag">Deep Learning</span>
+                <span class="rtag">Deepfake Detection &amp; Generation</span>
+                <span class="rtag">Medical Image Analysis</span>
+                <span class="rtag">Vision Transformers</span>
+                <span class="rtag">Generative Adversarial Networks</span>
+                <span class="rtag">Multimodal Sentiment Analysis</span>
+                <span class="rtag">Smart IoT Systems</span>
+                <span class="rtag">Network Security &amp; Cryptography</span>
+                <span class="rtag">Image &amp; Video Processing</span>
             </div>
-
-            <div class="about-bio">
-                <p>
-                    I am an <strong>Assistant Professor</strong> in the Department of Computer Science &amp; Engineering at <strong>Techno College of Engineering Agartala (TCEA)</strong> and a <strong>PhD Scholar</strong> at the <strong>National Institute of Technology (NIT) Agartala</strong>. My research lies at the intersection of <strong>Artificial Intelligence, Computer Vision, and Deep Learning</strong>, with a focus on real-world healthcare and security applications.
-                </p>
-                <p>
-                    I have authored <strong>15+ publications</strong> in peer-reviewed international journals and conferences (IEEE, CRC Press), hold a <strong>granted Indian patent</strong> on an AI-based learning disability detection device, and co-authored a <strong>textbook on Machine Learning</strong>. I am a member of IAENG and the Internet Society.
-                </p>
-            </div>
-
-            <!-- Education -->
-            <div class="sub-section" id="education">
-                <h3 class="sub-section-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                    Education
-                </h3>
-                <div class="timeline">
-                    <div class="tl-item reveal">
-                        <div class="tl-dot"></div>
-                        <div class="tl-body">
-                            <div class="tl-header">
-                                <span class="tl-degree">Doctor of Philosophy (PhD) — Computer Science &amp; Engineering</span>
-                                <span class="tl-year current-badge">2024 – Present</span>
-                            </div>
-                            <p class="tl-inst">National Institute of Technology Agartala (NIT Agartala)</p>
-                            <p class="tl-note">Research Area: Deep Learning, Computer Vision, Medical Image Analysis</p>
-                        </div>
-                    </div>
-                    <div class="tl-item reveal">
-                        <div class="tl-dot"></div>
-                        <div class="tl-body">
-                            <div class="tl-header">
-                                <span class="tl-degree">Master of Technology (M.Tech) — Computer Science &amp; Engineering</span>
-                                <span class="tl-year">2022</span>
-                            </div>
-                            <p class="tl-inst">Tripura University (A Central University)</p>
-                        </div>
-                    </div>
-                    <div class="tl-item reveal">
-                        <div class="tl-dot"></div>
-                        <div class="tl-body">
-                            <div class="tl-header">
-                                <span class="tl-degree">Bachelor of Technology (B.Tech) — Computer Science &amp; Engineering</span>
-                                <span class="tl-year">2020</span>
-                            </div>
-                            <p class="tl-inst">Tripura University (A Central University)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="research-blurb">
+                My research group works on developing deep neural architectures and pattern recognition frameworks for real-world problems. Current active projects include: <strong>Classifier Posterior GANs for deepfake synthesis &amp; forensics</strong>, <strong>Vision Transformer-based lung cancer detection</strong> from CT scans, and <strong>multimodal audio-visual sentiment analysis</strong>. I collaborate with faculty at NIT Agartala, Tripura University, and international researchers.
+            </p>
         </section>
 
-        <!-- ====== SCROLLING NEWS BOARD ====== -->
-        <section class="news-section" id="news">
-            <div class="news-header-bar">
-                <div class="news-label">
-                    <span class="live-dot"></span>
-                    Latest Updates &amp; News
-                </div>
-            </div>
-            <div class="news-board-wrap">
-                <div class="news-board" id="news-board">
-                    <div class="news-scroll-track" id="news-track">
-                        <div class="news-item">
-                            <span class="news-icon">🎓</span>
-                            <strong>[Feb 2026]</strong> Coordinated the <em>Prayukti 2026 Techfest</em> at Techno College of Engineering Agartala.
-                        </div>
-                        <div class="news-item">
-                            <span class="news-icon">📄</span>
-                            <strong>[2025]</strong> Two papers accepted at the <em>4th International Conference on Advanced Communications and Machine Intelligence (MICA 2025)</em>.
-                        </div>
-                        <div class="news-item">
-                            <span class="news-icon">🏆</span>
-                            <strong>[Jan 2025]</strong> Patent Granted: <em>"Learning Disability Detecting AI Device"</em> — Patent No. 438185-001.
-                        </div>
-                        <div class="news-item">
-                            <span class="news-icon">📖</span>
-                            <strong>[2025]</strong> Co-authored textbook <em>"Machine Learning"</em> published by Aryan Publishing House (ISBN 9788198761934).
-                        </div>
-                        <div class="news-item">
-                            <span class="news-icon">🔬</span>
-                            <strong>[Jul 2025]</strong> Presented research on <em>Vision Transformers in Lung Cancer Detection</em> at IEEE ICCCNT 2025, IIT Indore.
-                        </div>
-                        <div class="news-item">
-                            <span class="news-icon">💻</span>
-                            <strong>[2024]</strong> Coordinated the <em>Code &amp; AI Summer Internship 2024</em> on Machine Learning at K L University.
-                        </div>
-                        <div class="news-item">
-                            <span class="news-icon">🏅</span>
-                            <strong>[2023]</strong> Received <em>Best Paper Award</em> at ICACIA-2023 (K L University, Hyderabad).
-                        </div>
-                        <div class="news-item">
-                            <span class="news-icon">🤝</span>
-                            <strong>[2024]</strong> Joined as <em>PhD Scholar</em> at NIT Agartala under the Department of CSE.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <hr class="section-divider">
 
-        <!-- ====== RESEARCH ====== -->
-        <section class="content-section" id="research">
-            <div class="section-header">
-                <h2 class="section-title">Research Interests</h2>
-                <div class="section-line"></div>
-            </div>
-            <p class="section-desc">My research targets pattern recognition, bio-medical diagnostics, deepfake security, and intelligent IoT systems using cutting-edge deep learning.</p>
+        <!-- ===== PUBLICATIONS ===== -->
+        <section class="main-section" id="publications">
+            <h2 class="section-title">Publications</h2>
 
-            <div class="research-grid">
-                <div class="research-card reveal">
-                    <div class="rc-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </div>
-                    <h4>Computer Vision &amp; Image Processing</h4>
-                    <p>Advanced image segmentation, underwater visibility, object detection with YOLO and Transformer architectures.</p>
-                    <div class="rc-tags"><span>CNN</span><span>ViT</span><span>YOLO</span></div>
+            <div class="pub-controls">
+                <div class="pub-tabs" role="tablist">
+                    <button class="ptab active" data-tab="all">All</button>
+                    <button class="ptab" data-tab="journals">Journals</button>
+                    <button class="ptab" data-tab="conferences">Conferences</button>
+                    <button class="ptab" data-tab="chapters">Book Chapters</button>
                 </div>
-                <div class="research-card reveal">
-                    <div class="rc-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 1 0 5 5A5 5 0 0 0 12 2zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1"/></svg>
-                    </div>
-                    <h4>Deepfake Creation &amp; Detection</h4>
-                    <p>Generative Adversarial Networks (GANs), Classifier Posterior GANs, and forensic systems for media authenticity verification.</p>
-                    <div class="rc-tags"><span>GAN</span><span>CPGAN</span><span>Forensics</span></div>
+                <div class="pub-search-bar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" id="pub-search" placeholder="Search publications…">
                 </div>
-                <div class="research-card reveal">
-                    <div class="rc-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                    </div>
-                    <h4>Medical Imaging &amp; Diagnostics</h4>
-                    <p>Vision Transformers for lung cancer CT scans, deep learning malaria parasite screening, and automated clinical diagnostics.</p>
-                    <div class="rc-tags"><span>ViT</span><span>CT Scan</span><span>Healthcare AI</span></div>
-                </div>
-                <div class="research-card reveal">
-                    <div class="rc-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
-                    </div>
-                    <h4>Multimodal Sentiment Analysis</h4>
-                    <p>Fusing audio-visual features with BERT encoders for emotion recognition, music genre detection, and speaker mood analysis.</p>
-                    <div class="rc-tags"><span>BERT</span><span>NLP</span><span>Audio-Visual</span></div>
-                </div>
-                <div class="research-card reveal">
-                    <div class="rc-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-                    </div>
-                    <h4>Smart IoT &amp; Edge Computing</h4>
-                    <p>Integrating sensors and ML edge models for smart irrigation, water conservation, and elderly health monitoring systems.</p>
-                    <div class="rc-tags"><span>IoT</span><span>Edge ML</span><span>Embedded</span></div>
-                </div>
-                <div class="research-card reveal">
-                    <div class="rc-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg>
-                    </div>
-                    <h4>Network Security &amp; Cryptography</h4>
-                    <p>RSA encryption, tokenization frameworks for financial transaction security and digital identity verification systems.</p>
-                    <div class="rc-tags"><span>RSA</span><span>Cryptography</span><span>Security</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ====== PUBLICATIONS ====== -->
-        <section class="content-section" id="publications">
-            <div class="section-header">
-                <h2 class="section-title">Publications</h2>
-                <div class="section-line"></div>
             </div>
 
-            <!-- Tab Filter -->
-            <div class="pub-filters reveal">
-                <button class="pub-tab active" data-tab="all">All <span class="tab-count" id="count-all">15</span></button>
-                <button class="pub-tab" data-tab="journals">Journals <span class="tab-count" id="count-journals">2</span></button>
-                <button class="pub-tab" data-tab="conferences">Conferences <span class="tab-count" id="count-conferences">12</span></button>
-                <button class="pub-tab" data-tab="chapters">Book Chapters <span class="tab-count" id="count-chapters">1</span></button>
-            </div>
-
-            <!-- Search Box -->
-            <div class="pub-search-wrap reveal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" id="pub-search" placeholder="Search by title, author, venue, year…" />
-            </div>
-
-            <!-- Publications List -->
             <div class="pub-list" id="pub-list">
 
-                <!-- JOURNAL 1 -->
-                <div class="pub-entry reveal" data-cat="journals">
-                    <div class="pub-badges">
-                        <span class="pub-badge journal-badge">Journal</span>
-                        <span class="pub-year-badge">2025</span>
+                <!-- J1 -->
+                <div class="pub-item" data-cat="journals">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag journal-tag">Journal</span>
+                        <span class="pub-year">2025</span>
                     </div>
-                    <h4 class="pub-title">Enhancing Credit Card Security Using RSA Encryption and Tokenization: A Multi-Module Approach</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, M. Trinath Basu, Arpita Gupta, K. Ashrith, Chevella Vamshi Vardhan Reddy, Shashanth Reddy, Rohith Reddy</p>
+                    <p class="pub-title">Enhancing Credit Card Security Using RSA Encryption and Tokenization: A Multi-Module Approach</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, M. Trinath Basu, Arpita Gupta, K. Ashrith, Chevella Vamshi Vardhan Reddy, Shashanth Reddy, Rohith Reddy</p>
                     <p class="pub-venue"><em>International Journal of Informatics and Communication Technology (IJ-ICT)</em>, vol. 14, no. 1, pp. 132–140, 2025.</p>
-                    <div class="pub-actions-row">
-                        <a href="https://doi.org/10.11591/ijict.v14i1.pp132-140" target="_blank" class="pub-doi-link">DOI ↗</a>
-                        <button class="pub-cite-btn" data-bibtex="@article{saha2025enhancing,
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11591/ijict.v14i1.pp132-140" target="_blank" class="pub-link-doi">[DOI]</a>
+                        <button class="pub-link-cite" data-bibtex="@article{saha2025enhancing,
   title={Enhancing Credit Card Security Using RSA Encryption and Tokenization: A Multi-Module Approach},
   author={Saha, Mainak and Basu, M. Trinath and Gupta, Arpita and Ashrith, K. and Reddy, Chevella Vamshi Vardhan and Reddy, Shashanth and Reddy, Rohith},
   journal={International Journal of Informatics and Communication Technology (IJ-ICT)},
-  volume={14},
-  number={1},
-  pages={132--140},
-  year={2025},
+  volume={14}, number={1}, pages={132--140}, year={2025},
   doi={10.11591/ijict.v14i1.pp132-140}
-}">Cite BibTeX</button>
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- JOURNAL 2 -->
-                <div class="pub-entry reveal" data-cat="journals">
-                    <div class="pub-badges">
-                        <span class="pub-badge journal-badge">Journal</span>
-                        <span class="pub-year-badge">2025</span>
+                <!-- J2 -->
+                <div class="pub-item" data-cat="journals">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag journal-tag">Journal</span>
+                        <span class="pub-year">2025</span>
                     </div>
-                    <h4 class="pub-title">UniMSE: A Unified Approach for Multimodal Sentiment Analysis Leveraging the CMU-MOSI Dataset</h4>
-                    <p class="pub-authors">Miriyala Trinath Basu, <strong>Mainak Saha</strong>, Arpita Gupta, Sumit Hazra, Shahin Fatima, and others</p>
+                    <p class="pub-title">UniMSE: A Unified Approach for Multimodal Sentiment Analysis Leveraging the CMU-MOSI Dataset</p>
+                    <p class="pub-authors">Miriyala Trinath Basu, <u>Mainak Saha</u>, Arpita Gupta, Sumit Hazra, Shahin Fatima, and others</p>
                     <p class="pub-venue"><em>Indonesian Journal of Electrical Engineering and Computer Science</em>, vol. 39, no. 3, pp. 2032–2042, 2025.</p>
-                    <div class="pub-actions-row">
-                        <a href="https://doi.org/10.11591/ijeecs.v39.i3.pp2032-2042" target="_blank" class="pub-doi-link">DOI ↗</a>
-                        <button class="pub-cite-btn" data-bibtex="@article{basu2025unimse,
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11591/ijeecs.v39.i3.pp2032-2042" target="_blank" class="pub-link-doi">[DOI]</a>
+                        <button class="pub-link-cite" data-bibtex="@article{basu2025unimse,
   title={UniMSE: A Unified Approach for Multimodal Sentiment Analysis Leveraging the CMU-MOSI Dataset},
   author={Basu, Miriyala Trinath and Saha, Mainak and Gupta, Arpita and Hazra, Sumit and Fatima, Shahin},
   journal={Indonesian Journal of Electrical Engineering and Computer Science},
-  volume={39},
-  number={3},
-  pages={2032--2042},
-  year={2025},
+  volume={39}, number={3}, pages={2032--2042}, year={2025},
   doi={10.11591/ijeecs.v39.i3.pp2032-2042}
-}">Cite BibTeX</button>
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 1 — Best Paper Award -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-badge award-badge">🏅 Best Paper</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- C1 Best Paper -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-tag award-tag">&#127Medal; Best Paper</span>
+                        <span class="pub-year">2024</span>
                     </div>
-                    <h4 class="pub-title">A Comprehensive Survey on Deep Fake Object Creation and Detection: Challenges, and Future Directions</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Sourav Dey Roy, Santanu Das, Mrinal Kanti Bhowmik</p>
+                    <p class="pub-title">A Comprehensive Survey on Deep Fake Object Creation and Detection: Challenges, and Future Directions</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Sourav Dey Roy, Santanu Das, Mrinal Kanti Bhowmik</p>
                     <p class="pub-venue">ICACIA-2023 (K L University). <em>Advances in Computational Intelligence and Its Applications</em>, CRC Press, pp. 105–112, 2024.</p>
-                    <div class="pub-actions-row">
-                        <a href="https://doi.org/10.1201/9781003488682-15" target="_blank" class="pub-doi-link">DOI ↗</a>
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2024comprehensive,
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1201/9781003488682-15" target="_blank" class="pub-link-doi">[DOI]</a>
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2024comprehensive,
   title={A Comprehensive Survey on Deep Fake Object Creation and Detection},
   author={Saha, Mainak and Roy, Sourav Dey and Das, Santanu and Bhowmik, Mrinal Kanti},
   booktitle={Advances in Computational Intelligence and Its Applications},
-  pages={105--112},
-  year={2024},
-  publisher={CRC Press},
+  pages={105--112}, year={2024}, publisher={CRC Press},
   doi={10.1201/9781003488682-15}
-}">Cite BibTeX</button>
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 2 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-badge ieee-badge">IEEE</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- C2 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-tag ieee-tag">IEEE</span>
+                        <span class="pub-year">2024</span>
                     </div>
-                    <h4 class="pub-title">A Comprehensive Survey of Deep Learning Techniques in Malaria Diagnosis</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Rabin Bhaumik, Abadhan Ranganath, Miriyala Trinath Basu, Pavan Kumar Pagadala</p>
+                    <p class="pub-title">A Comprehensive Survey of Deep Learning Techniques in Malaria Diagnosis</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Rabin Bhaumik, Abadhan Ranganath, Miriyala Trinath Basu, Pavan Kumar Pagadala</p>
                     <p class="pub-venue"><em>IEEE ICCMLA 2024</em>, pp. 61–66, 2024.</p>
-                    <div class="pub-actions-row">
-                        <a href="https://doi.org/10.1109/ICCCMLA63077.2024.10871574" target="_blank" class="pub-doi-link">DOI ↗</a>
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2024malaria,
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/ICCCMLA63077.2024.10871574" target="_blank" class="pub-link-doi">[DOI]</a>
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2024malaria,
   title={A Comprehensive Survey of Deep Learning Techniques in Malaria Diagnosis},
   author={Saha, Mainak and Bhaumik, Rabin and Ranganath, Abadhan and Basu, Miriyala Trinath and Pagadala, Pavan Kumar},
-  booktitle={Proceedings of IEEE ICCMLA 2024},
-  pages={61--66},
-  year={2024},
+  booktitle={Proceedings of IEEE ICCMLA 2024}, pages={61--66}, year={2024},
   doi={10.1109/ICCCMLA63077.2024.10871574}
-}">Cite BibTeX</button>
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 3 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-badge ieee-badge">IEEE</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- C3 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-tag ieee-tag">IEEE</span>
+                        <span class="pub-year">2024</span>
                     </div>
-                    <h4 class="pub-title">Cyber Deceptions: Unveiling the Threat of Deepfakes in Digital Realms</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Pavan Kumar Pagadala, Miriyala Trinath Basu</p>
+                    <p class="pub-title">Cyber Deceptions: Unveiling the Threat of Deepfakes in Digital Realms</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Pavan Kumar Pagadala, Miriyala Trinath Basu</p>
                     <p class="pub-venue"><em>IEEE ICCMLA 2024</em>, pp. 113–116, 2024.</p>
-                    <div class="pub-actions-row">
-                        <a href="https://doi.org/10.1109/ICCCMLA63077.2024.10871909" target="_blank" class="pub-doi-link">DOI ↗</a>
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2024cyber,
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/ICCCMLA63077.2024.10871909" target="_blank" class="pub-link-doi">[DOI]</a>
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2024cyber,
   title={Cyber Deceptions: Unveiling the Threat of Deepfakes in Digital Realms},
   author={Saha, Mainak and Pagadala, Pavan Kumar and Basu, Miriyala Trinath},
-  booktitle={Proceedings of IEEE ICCMLA 2024},
-  pages={113--116},
-  year={2024},
+  booktitle={Proceedings of IEEE ICCMLA 2024}, pages={113--116}, year={2024},
   doi={10.1109/ICCCMLA63077.2024.10871909}
-}">Cite BibTeX</button>
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 4 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- C4 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2024</span>
                     </div>
-                    <h4 class="pub-title">Underwater Object Detection: Synergizing Image Processing Techniques with Deep Learning Frameworks</h4>
-                    <p class="pub-authors">Sushanta Das, <strong>Mainak Saha</strong>, Ranjita Das, Tannistha Pal</p>
+                    <p class="pub-title">Underwater Object Detection: Synergizing Image Processing Techniques with Deep Learning Frameworks</p>
+                    <p class="pub-authors">Sushanta Das, <u>Mainak Saha</u>, Ranjita Das, Tannistha Pal</p>
                     <p class="pub-venue">Accepted at <em>AMRIT-2024</em>, NIT Agartala.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{das2024underwater,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{das2024underwater,
   title={Underwater Object Detection: Synergizing Image Processing Techniques with Deep Learning Frameworks},
   author={Das, Sushanta and Saha, Mainak and Das, Ranjita and Pal, Tannistha},
-  booktitle={AMRIT-2024},
-  year={2024}
-}">Cite BibTeX</button>
+  booktitle={AMRIT-2024}, year={2024}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 5 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- C5 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2024</span>
                     </div>
-                    <h4 class="pub-title">Smart Water Management System Using IoT and Machine Learning</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Prabir Sarker, Miriyala Trinath Basu</p>
+                    <p class="pub-title">Smart Water Management System Using IoT and Machine Learning</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Prabir Sarker, Miriyala Trinath Basu</p>
                     <p class="pub-venue">Accepted at <em>AMRIT-2024</em>, NIT Agartala.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2024smart,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2024smart,
   title={Smart Water Management System Using IoT and Machine Learning},
   author={Saha, Mainak and Sarker, Prabir and Basu, Miriyala Trinath},
-  booktitle={AMRIT-2024},
-  year={2024}
-}">Cite BibTeX</button>
+  booktitle={AMRIT-2024}, year={2024}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 6 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- C6 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2024</span>
                     </div>
-                    <h4 class="pub-title">Classifier Posterior GAN for Enhanced Deepfake Generation and Detection</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Mrinal Kanti Bhowmik, Sourav Dey Roy</p>
+                    <p class="pub-title">Classifier Posterior GAN for Enhanced Deepfake Generation and Detection</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Mrinal Kanti Bhowmik, Sourav Dey Roy</p>
                     <p class="pub-venue"><em>IEEE IEMCON 2024</em>, Vancouver, Canada.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2024cpgan,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2024cpgan,
   title={Classifier Posterior GAN for Enhanced Deepfake Generation and Detection},
   author={Saha, Mainak and Bhowmik, Mrinal Kanti and Roy, Sourav Dey},
-  booktitle={IEEE IEMCON 2024},
-  year={2024}
-}">Cite BibTeX</button>
+  booktitle={IEEE IEMCON 2024}, year={2024}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 7 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-badge ieee-badge">IEEE</span>
-                        <span class="pub-year-badge">2025</span>
+                <!-- C7 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-tag ieee-tag">IEEE</span>
+                        <span class="pub-year">2025</span>
                     </div>
-                    <h4 class="pub-title">Vision Transformers for Lung Cancer Detection in CT Images</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Mrinal Kanti Bhowmik, Parijata Majumdar</p>
+                    <p class="pub-title">Vision Transformers for Lung Cancer Detection in CT Images</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Mrinal Kanti Bhowmik, Parijata Majumdar</p>
                     <p class="pub-venue"><em>IEEE ICCCNT 2025</em>, IIT Indore.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2025vit,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2025vit,
   title={Vision Transformers for Lung Cancer Detection in CT Images},
   author={Saha, Mainak and Bhowmik, Mrinal Kanti and Majumdar, Parijata},
-  booktitle={IEEE ICCCNT 2025},
-  year={2025}
-}">Cite BibTeX</button>
+  booktitle={IEEE ICCCNT 2025}, year={2025}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 8 — MICA 2025 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2025</span>
+                <!-- C8 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2025</span>
                     </div>
-                    <h4 class="pub-title">Automated Malaria Parasite Detection Using Convolutional Neural Networks</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Mrinal Kanti Bhowmik</p>
+                    <p class="pub-title">Automated Malaria Parasite Detection Using Convolutional Neural Networks</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Mrinal Kanti Bhowmik</p>
                     <p class="pub-venue"><em>4th International Conference on Advanced Communications and Machine Intelligence (MICA 2025)</em>.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2025malaria,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2025malaria,
   title={Automated Malaria Parasite Detection Using Convolutional Neural Networks},
   author={Saha, Mainak and Bhowmik, Mrinal Kanti},
-  booktitle={MICA 2025},
-  year={2025}
-}">Cite BibTeX</button>
+  booktitle={MICA 2025}, year={2025}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 9 — MICA 2025 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2025</span>
+                <!-- C9 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2025</span>
                     </div>
-                    <h4 class="pub-title">Deep Learning-Based Video Compression Using Temporal Redundancy Reduction</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Parijata Majumdar, Mrinal Kanti Bhowmik</p>
+                    <p class="pub-title">Deep Learning-Based Video Compression Using Temporal Redundancy Reduction</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Parijata Majumdar, Mrinal Kanti Bhowmik</p>
                     <p class="pub-venue"><em>4th International Conference on Advanced Communications and Machine Intelligence (MICA 2025)</em>.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2025video,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2025video,
   title={Deep Learning-Based Video Compression Using Temporal Redundancy Reduction},
   author={Saha, Mainak and Majumdar, Parijata and Bhowmik, Mrinal Kanti},
-  booktitle={MICA 2025},
-  year={2025}
-}">Cite BibTeX</button>
+  booktitle={MICA 2025}, year={2025}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 10 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- C10 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2024</span>
                     </div>
-                    <h4 class="pub-title">Music Genre Classification Using Multimodal Deep Learning</h4>
-                    <p class="pub-authors">Miriyala Trinath Basu, <strong>Mainak Saha</strong>, Arpita Gupta</p>
+                    <p class="pub-title">Music Genre Classification Using Multimodal Deep Learning</p>
+                    <p class="pub-authors">Miriyala Trinath Basu, <u>Mainak Saha</u>, Arpita Gupta</p>
                     <p class="pub-venue"><em>IEEE ICCMLA 2024</em>.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{basu2024music,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{basu2024music,
   title={Music Genre Classification Using Multimodal Deep Learning},
   author={Basu, Miriyala Trinath and Saha, Mainak and Gupta, Arpita},
-  booktitle={IEEE ICCMLA 2024},
-  year={2024}
-}">Cite BibTeX</button>
+  booktitle={IEEE ICCMLA 2024}, year={2024}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 11 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2023</span>
+                <!-- C11 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2023</span>
                     </div>
-                    <h4 class="pub-title">Smart Irrigation System Using Machine Learning and IoT Sensors for Water Conservation</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, M. Trinath Basu</p>
+                    <p class="pub-title">Smart Irrigation System Using Machine Learning and IoT Sensors for Water Conservation</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, M. Trinath Basu</p>
                     <p class="pub-venue"><em>ICACIA-2023</em>, K L University, Hyderabad.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2023irrigation,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2023irrigation,
   title={Smart Irrigation System Using Machine Learning and IoT Sensors},
   author={Saha, Mainak and Basu, M. Trinath},
-  booktitle={ICACIA-2023},
-  year={2023}
-}">Cite BibTeX</button>
+  booktitle={ICACIA-2023}, year={2023}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- CONF 12 -->
-                <div class="pub-entry reveal" data-cat="conferences">
-                    <div class="pub-badges">
-                        <span class="pub-badge conf-badge">Conference</span>
-                        <span class="pub-year-badge">2023</span>
+                <!-- C12 -->
+                <div class="pub-item" data-cat="conferences">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag conf-tag">Conference</span>
+                        <span class="pub-year">2023</span>
                     </div>
-                    <h4 class="pub-title">Elderly Health Monitoring System Using IoT and Machine Learning</h4>
-                    <p class="pub-authors"><strong>Mainak Saha</strong>, Parijata Majumdar, Sanjoy Mitra</p>
+                    <p class="pub-title">Elderly Health Monitoring System Using IoT and Machine Learning</p>
+                    <p class="pub-authors"><u>Mainak Saha</u>, Parijata Majumdar, Sanjoy Mitra</p>
                     <p class="pub-venue"><em>ICACIA-2023</em>, K L University, Hyderabad.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@inproceedings{saha2023elderly,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@inproceedings{saha2023elderly,
   title={Elderly Health Monitoring System Using IoT and Machine Learning},
   author={Saha, Mainak and Majumdar, Parijata and Mitra, Sanjoy},
-  booktitle={ICACIA-2023},
-  year={2023}
-}">Cite BibTeX</button>
+  booktitle={ICACIA-2023}, year={2023}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-                <!-- BOOK CHAPTER -->
-                <div class="pub-entry reveal" data-cat="chapters">
-                    <div class="pub-badges">
-                        <span class="pub-badge chapter-badge">Book Chapter</span>
-                        <span class="pub-year-badge">2024</span>
+                <!-- Book Chapter -->
+                <div class="pub-item" data-cat="chapters">
+                    <div class="pub-meta-line">
+                        <span class="pub-tag chapter-tag">Book Chapter</span>
+                        <span class="pub-year">2025</span>
                     </div>
-                    <h4 class="pub-title">Deep Learning in Medical Image Analysis: Techniques, Challenges, and Future Perspectives</h4>
-                    <p class="pub-authors">Parijata Majumdar, <strong>Mainak Saha</strong>, Sanjoy Mitra</p>
+                    <p class="pub-title">Deep Learning in Medical Image Analysis: Techniques, Challenges, and Future Perspectives</p>
+                    <p class="pub-authors">Parijata Majumdar, <u>Mainak Saha</u>, Sanjoy Mitra</p>
                     <p class="pub-venue">In: <em>Emerging Technologies in Biomedical Applications</em>, Aryan Publishing House, 2025, ISBN 9788198761934.</p>
-                    <div class="pub-actions-row">
-                        <button class="pub-cite-btn" data-bibtex="@incollection{majumdar2025deep,
+                    <div class="pub-links">
+                        <button class="pub-link-cite" data-bibtex="@incollection{majumdar2025deep,
   title={Deep Learning in Medical Image Analysis},
   author={Majumdar, Parijata and Saha, Mainak and Mitra, Sanjoy},
   booktitle={Emerging Technologies in Biomedical Applications},
-  year={2025},
-  publisher={Aryan Publishing House}
-}">Cite BibTeX</button>
+  year={2025}, publisher={Aryan Publishing House}
+}">[Cite BibTeX]</button>
                     </div>
                 </div>
 
-            </div>
-            <!-- End pub-list -->
+            </div><!-- end pub-list -->
         </section>
 
-        <!-- ====== PATENT & BOOK HIGHLIGHTS ====== -->
-        <section class="content-section" id="highlights">
-            <div class="section-header">
-                <h2 class="section-title">Patent &amp; Book</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="highlights-row">
-                <!-- Patent -->
-                <div class="highlight-card patent-hl reveal">
-                    <div class="hl-icon">⚙️</div>
-                    <span class="hl-label">Indian Patent — Granted</span>
-                    <h4>Learning Disability Detecting AI Device</h4>
-                    <p class="hl-meta">Patent No. 438185-001 &nbsp;|&nbsp; Issued: 13 January 2025</p>
-                    <p class="hl-desc">An IoT &amp; AI hardware-software system for early identification of cognitive learning difficulties in children via biometric monitoring.</p>
-                    <p class="hl-inventors"><strong>Inventors:</strong> P. Majumdar, S. Paul, D. Choudhury, A. K. Sen, <strong>M. Saha</strong>, M. T. Basu</p>
-                    <button class="hl-cite-btn" data-bibtex="@patent{majumdar2025learning,
-  title={Learning Disability Detecting AI Device},
-  number={438185-001},
-  year={2025},
-  month={01},
-  day={13},
-  location={India},
-  status={Granted}
-}">Cite Patent</button>
+        <hr class="section-divider">
+
+        <!-- ===== PATENT & BOOK ===== -->
+        <section class="main-section" id="patents">
+            <h2 class="section-title">Patent &amp; Book</h2>
+
+            <div class="pub-item patent-item">
+                <div class="pub-meta-line">
+                    <span class="pub-tag patent-tag">Indian Patent — Granted</span>
+                    <span class="pub-year">Jan 2025</span>
                 </div>
-                <!-- Book -->
-                <div class="highlight-card book-hl reveal">
-                    <div class="hl-icon">📘</div>
-                    <span class="hl-label">Authored Textbook</span>
-                    <h4>Machine Learning</h4>
-                    <p class="hl-meta">Aryan Publishing House &nbsp;|&nbsp; ISBN 9788198761934 &nbsp;|&nbsp; 2025</p>
-                    <p class="hl-desc">A comprehensive undergraduate/postgraduate textbook covering core ML algorithms, neural architectures, and practical implementations.</p>
-                    <p class="hl-inventors"><strong>Authors:</strong> Dr. P. Majumdar, Dr. S. Mitra, <strong>M. Saha</strong>, B. Roy</p>
-                    <button class="hl-cite-btn" data-bibtex="@book{majumdar2025mlbook,
+                <p class="pub-title">Learning Disability Detecting AI Device</p>
+                <p class="pub-authors">P. Majumdar, S. Paul, D. Choudhury, A. K. Sen, <u>M. Saha</u>, M. T. Basu</p>
+                <p class="pub-venue">Patent No. <strong>438185-001</strong>. Issued: January 13, 2025. Government of India.</p>
+                <div class="pub-links">
+                    <button class="pub-link-cite" data-bibtex="@patent{majumdar2025learning,
+  title={Learning Disability Detecting AI Device},
+  author={Majumdar, Parijata and Paul, Sushmita and Choudhury, Deeptanu and Sen, Ankit Kishore and Saha, Mainak and Basu, M. Trinath},
+  number={438185-001}, year={2025}, month={01}, day={13},
+  location={India}, status={Granted}
+}">[Cite Patent]</button>
+                </div>
+            </div>
+
+            <div class="pub-item book-item">
+                <div class="pub-meta-line">
+                    <span class="pub-tag book-tag">Authored Textbook</span>
+                    <span class="pub-year">2025</span>
+                </div>
+                <p class="pub-title">Machine Learning</p>
+                <p class="pub-authors">Dr. Parijata Majumdar, Dr. Sanjoy Mitra, <u>Mainak Saha</u>, Biswaraj Roy</p>
+                <p class="pub-venue">Aryan Publishing House, 2025. ISBN: <strong>9788198761934</strong>.</p>
+                <div class="pub-links">
+                    <button class="pub-link-cite" data-bibtex="@book{majumdar2025mlbook,
   title={Machine Learning},
   author={Majumdar, Parijata and Mitra, Sanjoy and Saha, Mainak and Roy, Biswaraj},
-  year={2025},
-  publisher={Aryan Publishing House},
-  isbn={9788198761934}
-}">Cite Book</button>
+  year={2025}, publisher={Aryan Publishing House}, isbn={9788198761934}
+}">[Cite Book]</button>
                 </div>
             </div>
         </section>
 
-        <!-- ====== EXPERIENCE ====== -->
-        <section class="content-section" id="experience">
-            <div class="section-header">
-                <h2 class="section-title">Teaching Experience</h2>
-                <div class="section-line"></div>
-            </div>
+        <hr class="section-divider">
 
-            <div class="exp-table-wrap reveal">
-                <table class="exp-table">
-                    <thead>
-                        <tr>
-                            <th>Institution</th>
-                            <th>Role</th>
-                            <th>Period</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="current-row">
-                            <td><strong>Techno College of Engineering Agartala (TCEA)</strong></td>
-                            <td>Assistant Professor, CSE</td>
-                            <td><span class="current-tag">2025 – Present</span></td>
-                        </tr>
-                        <tr>
-                            <td>ICFAI University Tripura</td>
-                            <td>Visiting Professor, CSE</td>
-                            <td>2024 – 2025</td>
-                        </tr>
-                        <tr>
-                            <td>K L University, Hyderabad</td>
-                            <td>Assistant Professor, CSE</td>
-                            <td>2023 – 2024</td>
-                        </tr>
-                        <tr>
-                            <td>K J Institute of Engineering &amp; Technology, Gujarat</td>
-                            <td>Assistant Professor, CSE</td>
-                            <td>2022 – 2023</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <!-- ===== EXPERIENCE ===== -->
+        <section class="main-section" id="experience">
+            <h2 class="section-title">Teaching Experience</h2>
+            <table class="exp-table">
+                <thead>
+                    <tr>
+                        <th>Institution</th>
+                        <th>Position</th>
+                        <th>Period</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Techno College of Engineering Agartala</strong></td>
+                        <td>Assistant Professor, CSE</td>
+                        <td>2025 – Present</td>
+                    </tr>
+                    <tr>
+                        <td>ICFAI University Tripura</td>
+                        <td>Visiting Professor, CSE</td>
+                        <td>2024 – 2025</td>
+                    </tr>
+                    <tr>
+                        <td>K L University, Hyderabad</td>
+                        <td>Assistant Professor, CSE</td>
+                        <td>2023 – 2024</td>
+                    </tr>
+                    <tr>
+                        <td>K J Institute of Engg. &amp; Tech, Gujarat</td>
+                        <td>Assistant Professor, CSE</td>
+                        <td>2022 – 2023</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <!-- Subjects Taught -->
-            <div class="sub-section">
-                <h3 class="sub-section-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    Subjects Taught
-                </h3>
-                <div class="subject-tags">
-                    <span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span>
-                    <span>Computer Vision</span><span>Data Structures</span><span>Algorithms</span>
-                    <span>Database Management</span><span>Operating Systems</span><span>Computer Networks</span>
-                    <span>Python Programming</span><span>Data Mining</span><span>Big Data Analytics</span>
-                    <span>Image Processing</span><span>NLP</span>
-                </div>
+            <h3 class="sub-heading">Subjects Taught</h3>
+            <div class="skill-tags">
+                <span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span>
+                <span>Computer Vision</span><span>Image Processing</span><span>Data Structures</span>
+                <span>Algorithms</span><span>Database Management</span><span>Operating Systems</span>
+                <span>Computer Networks</span><span>Python Programming</span><span>Data Mining</span>
+                <span>Big Data Analytics</span><span>NLP</span>
             </div>
         </section>
 
-        <!-- ====== PROFESSIONAL SERVICE ====== -->
-        <section class="content-section" id="service">
-            <div class="section-header">
-                <h2 class="section-title">Professional Service &amp; Activities</h2>
-                <div class="section-line"></div>
-            </div>
+        <hr class="section-divider">
 
-            <div class="service-grid">
-                <!-- Reviewer / PC -->
-                <div class="service-card reveal">
-                    <h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                        Program Committee &amp; Reviewer
-                    </h4>
-                    <ul>
-                        <li>Technical Program Committee (TPC) — IEEE ICCMLA 2024, 2025</li>
-                        <li>Reviewer — <em>IEEE Transactions on Neural Networks and Learning Systems</em></li>
-                        <li>Reviewer — <em>MDPI Sensors</em></li>
-                        <li>Session Chair — IEEE ICCCNT 2025 (IIT Indore)</li>
-                    </ul>
-                </div>
+        <!-- ===== SERVICE ===== -->
+        <section class="main-section" id="service">
+            <h2 class="section-title">Professional Service</h2>
 
-                <!-- Workshops / FDP -->
-                <div class="service-card reveal">
-                    <h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        Workshops &amp; FDPs Attended
-                    </h4>
-                    <ul>
-                        <li>AICTE-ATAL FDP on "Deep Learning for Computer Vision" — NIT Agartala (2024)</li>
-                        <li>AICTE-ATAL FDP on "AI &amp; ML Applications" — Tripura University (2023)</li>
-                        <li>Bootcamp on Applied Data Science — K L University (2023)</li>
-                        <li>Workshop on Cloud Computing &amp; AWS — Gujarat (2022)</li>
-                    </ul>
-                </div>
+            <h3 class="sub-heading">Reviewer / Program Committee</h3>
+            <ul class="service-list">
+                <li>Technical Program Committee (TPC) &mdash; IEEE ICCMLA 2024, 2025</li>
+                <li>Reviewer &mdash; <em>IEEE Transactions on Neural Networks and Learning Systems</em></li>
+                <li>Reviewer &mdash; <em>MDPI Sensors</em></li>
+                <li>Session Chair &mdash; IEEE ICCCNT 2025 (IIT Indore)</li>
+            </ul>
 
-                <!-- Events Organized -->
-                <div class="service-card reveal">
-                    <h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        Events Organized
-                    </h4>
-                    <ul>
-                        <li><strong>Prayukti 2026</strong> — Annual Techfest Coordinator, TCEA (2026)</li>
-                        <li><strong>Impactech 2K24</strong> — National Hackathon Organizer, K L University (2024)</li>
-                        <li><strong>Code &amp; AI Summer Internship 2024</strong> — ML Bootcamp, K L University</li>
-                        <li>Guest Lectures on Deepfakes &amp; AI Safety — Multiple Institutions</li>
-                    </ul>
-                </div>
+            <h3 class="sub-heading">Events Organized</h3>
+            <ul class="service-list">
+                <li><strong>Prayukti 2026</strong> &mdash; Annual Techfest Coordinator, TCEA (Feb 2026)</li>
+                <li><strong>Impactech 2K24</strong> &mdash; National Hackathon Organizer, K L University (2024)</li>
+                <li><strong>Code &amp; AI Summer Internship 2024</strong> &mdash; ML Bootcamp, K L University</li>
+                <li>Guest Lectures on Deepfakes &amp; AI Safety at multiple institutions</li>
+            </ul>
 
-                <!-- Professional Memberships -->
-                <div class="service-card reveal">
-                    <h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        Professional Memberships
-                    </h4>
-                    <ul>
-                        <li>Member, <strong>IAENG</strong> (International Association of Engineers)</li>
-                        <li>Member, <strong>Internet Society</strong></li>
-                        <li>Student Member, <strong>IEEE</strong></li>
-                    </ul>
-                </div>
-            </div>
+            <h3 class="sub-heading">Professional Memberships</h3>
+            <ul class="service-list">
+                <li>Member &mdash; <strong>IAENG</strong> (International Association of Engineers)</li>
+                <li>Member &mdash; <strong>Internet Society</strong></li>
+                <li>Student Member &mdash; <strong>IEEE</strong></li>
+            </ul>
         </section>
 
-        <!-- ====== SKILLS ====== -->
-        <section class="content-section" id="skills">
-            <div class="section-header">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-group reveal">
-                    <h4>Programming Languages</h4>
-                    <div class="skill-chips">
-                        <span>Python</span><span>C</span><span>C++</span><span>Java</span><span>MATLAB</span><span>SQL</span>
-                    </div>
-                </div>
-                <div class="skill-group reveal">
-                    <h4>AI / Deep Learning Frameworks</h4>
-                    <div class="skill-chips">
-                        <span>TensorFlow</span><span>PyTorch</span><span>Keras</span><span>Scikit-learn</span><span>OpenCV</span><span>HuggingFace</span>
-                    </div>
-                </div>
-                <div class="skill-group reveal">
-                    <h4>Tools &amp; Platforms</h4>
-                    <div class="skill-chips">
-                        <span>Google Colab</span><span>Jupyter</span><span>Git</span><span>AWS</span><span>Raspberry Pi</span><span>Arduino</span>
-                    </div>
-                </div>
-                <div class="skill-group reveal">
-                    <h4>Research Areas</h4>
-                    <div class="skill-chips">
-                        <span>Computer Vision</span><span>NLP</span><span>GANs</span><span>Transformers</span><span>Image Processing</span><span>IoT</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <hr class="section-divider">
 
-        <!-- ====== CONTACT ====== -->
-        <section class="content-section" id="contact">
-            <div class="section-header">
-                <h2 class="section-title">Get in Touch</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info-block reveal">
-                    <h3>Let's Collaborate</h3>
-                    <p>I welcome collaboration on AI/ML research, student project mentoring, workshop invitations, and academic networking. Feel free to reach out!</p>
-
-                    <div class="contact-detail-list">
-                        <div class="cd-item">
-                            <div class="cd-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            </div>
-                            <div>
-                                <span class="cd-label">Email</span>
-                                <a href="mailto:mainaksaha6309@gmail.com" class="cd-value">mainaksaha6309@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="cd-item">
-                            <div class="cd-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.18 6.18l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
-                            <div>
-                                <span class="cd-label">Phone</span>
-                                <a href="tel:+919732256480" class="cd-value">+91 97322 56480</a>
-                            </div>
-                        </div>
-                        <div class="cd-item">
-                            <div class="cd-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </div>
-                            <div>
-                                <span class="cd-label">Location</span>
-                                <span class="cd-value">Agartala, Tripura 799004, India</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-social-block reveal">
-                    <h3>Find Me Online</h3>
-                    <div class="social-grid">
-                        <a href="https://orcid.org/0009-0001-1748-0317" target="_blank" class="social-card orcid-social">
-                            <span class="social-id-badge">iD</span>
-                            <div>
-                                <strong>ORCID</strong>
-                                <span>0009-0001-1748-0317</span>
-                            </div>
-                        </a>
-                        <a href="https://linkedin.com/in/mainak--saha/" target="_blank" class="social-card linkedin-social">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                            <div>
-                                <strong>LinkedIn</strong>
-                                <span>mainak--saha</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/mainakagt97" target="_blank" class="social-card github-social">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            <div>
-                                <strong>GitHub</strong>
-                                <span>mainakagt97</span>
-                            </div>
-                        </a>
-                    </div>
+        <!-- ===== CONTACT ===== -->
+        <section class="main-section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-intro">I welcome inquiries regarding research collaboration, speaking invitations, student project mentoring, and academic networking.</p>
+            <div class="contact-grid-main">
+                <div>
+                    <p><strong>Email:</strong> <a href="mailto:mainaksaha6309@gmail.com">mainaksaha6309@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+919732256480">+91 97322 56480</a></p>
+                    <p><strong>Address:</strong> Department of CSE, NIT Agartala, Suryamaninagar, Tripura 799046, India</p>
+                    <p><strong>DOB:</strong> 28 December 1997</p>
+                    <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0001-1748-0317" target="_blank">0009-0001-1748-0317</a></p>
                 </div>
             </div>
         </section>
 
     </main>
-</div>
-<!-- End page-wrapper -->
 
-<!-- ============================================
+</div><!-- end layout-wrapper -->
+
+<!-- =====================
      FOOTER
-============================================ -->
+===================== -->
 <footer class="site-footer">
     <div class="footer-inner">
-        <p>&copy; 2025 Mainak Saha. All rights reserved.</p>
-        <p class="footer-sub">Assistant Professor &amp; PhD Scholar · NIT Agartala · AI &amp; Computer Vision</p>
+        <p><strong>Mainak Saha</strong> &mdash; Assistant Professor &amp; PhD Scholar, CSE</p>
+        <p>NIT Agartala &nbsp;&bull;&nbsp; Techno College of Engineering Agartala &nbsp;&bull;&nbsp; Tripura, India</p>
+        <p class="footer-copy">&copy; 2025 Mainak Saha. All rights reserved.</p>
     </div>
 </footer>
 
-<!-- ============================================
-     BIBTEX MODAL
-============================================ -->
+<!-- BibTeX Modal -->
 <div class="modal-overlay" id="cite-modal">
     <div class="modal-box">
-        <div class="modal-header">
+        <div class="modal-head">
             <h4>BibTeX Citation</h4>
-            <button class="modal-close" id="modal-close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </button>
+            <button id="modal-close" title="Close">&#x2715;</button>
         </div>
-        <pre class="modal-bibtex" id="modal-bibtex-content"></pre>
-        <button class="modal-copy-btn" id="modal-copy">Copy to Clipboard</button>
+        <pre id="modal-bibtex"></pre>
+        <button id="modal-copy">Copy to Clipboard</button>
     </div>
 </div>
 
