@@ -154,6 +154,15 @@ a:hover { text-decoration: underline; }
     text-decoration: none;
 }
 
+.nav-menu li a.nav-cv-btn {
+    color: var(--navy);
+    font-weight: 700;
+}
+.nav-menu li a.nav-cv-btn:hover {
+    color: var(--navy-mid);
+    border-bottom-color: var(--navy-mid);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
