@@ -1,4 +1,4 @@
-/* Custom JS for Mainak Saha's Academic Portfolio */
+/* Custom Upgraded JS for Mainak Saha's Academic Profile */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
-    // Check for saved theme preference; default to dark
     const savedTheme = localStorage.getItem('theme') || 'dark';
     root.setAttribute('data-theme', savedTheme);
 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             mobileToggle.classList.remove('active');
@@ -53,27 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentWord = words[wordIndex];
         
         if (isDeleting) {
-            // Remove character
             typingSpan.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 50; // faster deletion
+            typingSpeed = 50;
         } else {
-            // Add character
             typingSpan.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 120; // typing speed
+            typingSpeed = 120;
         }
 
-        // Cycle control
         if (!isDeleting && charIndex === currentWord.length) {
-            // Finished typing word, wait before deleting
             isDeleting = true;
-            typingSpeed = 1500; // Pause at end of word
+            typingSpeed = 1500; // Pause at end
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
-            // Move to next word
             wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500; // Pause before typing next word
+            typingSpeed = 500; // Pause before typing next
         }
 
         setTimeout(typeEffect, typingSpeed);
@@ -92,12 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Trigger only once
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
@@ -111,8 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const accItem = header.parentElement;
             
-            // Close other items if desired (exclusive accordion behavior)
-            // Comment out to allow multiple open accordions
             document.querySelectorAll('.acc-item').forEach(item => {
                 if (item !== accItem) {
                     item.classList.remove('active');
@@ -145,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (matchesCategory && matchesSearch) {
                 item.style.display = 'flex';
-                // Trigger a small animation re-entry
                 item.style.animation = 'none';
                 item.offsetHeight; // trigger reflow
                 item.style.animation = 'fadeIn 0.4s ease';
@@ -155,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Tab buttons event listener
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             tabBtns.forEach(b => b.classList.remove('active'));
@@ -165,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Search input listener with simple debounce
     let searchTimeout;
     pubSearch.addEventListener('input', (e) => {
         clearTimeout(searchTimeout);
@@ -176,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 7. Contact Email Client-composer Composer
+    // 7. Contact Email Client Composer
     // ==========================================
     const contactForm = document.getElementById('contact-form');
 
@@ -188,15 +176,146 @@ document.addEventListener('DOMContentLoaded', () => {
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
-            // Generate mailto link parameters
             const emailTo = 'mainak.skms@gmail.com';
             const emailSubject = encodeURIComponent(`[Portfolio Query] ${subject}`);
             const emailBody = encodeURIComponent(
                 `Hello Mainak,\n\nMy name is ${name}.\n\nMessage:\n${message}\n\nBest Regards,\n${name}`
             );
 
-            // Open user's default email composer
             window.location.href = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
         });
+    }
+
+    // ==========================================
+    // 8. Academic Ticker Infinite Loop Cloning
+    // ==========================================
+    const tickerTrack = document.getElementById('ticker-track');
+    if (tickerTrack) {
+        const items = Array.from(tickerTrack.children);
+        
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            tickerTrack.appendChild(clone);
+        });
+
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            tickerTrack.appendChild(clone);
+        });
+    }
+
+    // ==========================================
+    // 9. BibTeX Citation Modal & Copy to Clipboard
+    // ==========================================
+    const citeModal = document.getElementById('cite-modal');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const bibtexCodeContent = document.getElementById('bibtex-code-content');
+    const copyBibtexBtn = document.getElementById('copy-bibtex-btn');
+    
+    const citeButtons = document.querySelectorAll('.btn-cite, .btn-cite-trigger');
+
+    function openCiteModal(bibtexData) {
+        bibtexCodeContent.textContent = bibtexData.trim();
+        citeModal.classList.add('active');
+        citeModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeCiteModal() {
+        citeModal.classList.remove('active');
+        citeModal.setAttribute('aria-hidden', 'true');
+        
+        const copyText = copyBibtexBtn.querySelector('span');
+        const successIcon = copyBibtexBtn.querySelector('.copy-success-icon');
+        copyText.textContent = "Copy Code";
+        successIcon.style.display = "none";
+    }
+
+    // Use event delegation or loop to bind cite triggers
+    document.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.classList.contains('btn-cite') || target.classList.contains('btn-cite-trigger')) {
+            e.stopPropagation();
+            const bibtex = target.getAttribute('data-bibtex');
+            if (bibtex) {
+                openCiteModal(bibtex);
+            }
+        }
+    });
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeCiteModal);
+    }
+
+    if (citeModal) {
+        citeModal.addEventListener('click', (e) => {
+            if (e.target === citeModal) {
+                closeCiteModal();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && citeModal.classList.contains('active')) {
+                closeCiteModal();
+            }
+        });
+    }
+
+    if (copyBibtexBtn) {
+        copyBibtexBtn.addEventListener('click', () => {
+            const codeText = bibtexCodeContent.textContent;
+            navigator.clipboard.writeText(codeText).then(() => {
+                const copyText = copyBibtexBtn.querySelector('span');
+                const successIcon = copyBibtexBtn.querySelector('.copy-success-icon');
+                
+                copyText.textContent = "Copied!";
+                successIcon.style.display = "inline-block";
+                
+                setTimeout(() => {
+                    copyText.textContent = "Copy Code";
+                    successIcon.style.display = "none";
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
+    }
+
+    // ==========================================
+    // 10. Smooth Stats Counter Animation
+    // ==========================================
+    const statsNums = document.querySelectorAll('.stat-num');
+    
+    if (statsNums.length > 0) {
+        const countObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const targetEl = entry.target;
+                    const endVal = parseInt(targetEl.getAttribute('data-val'), 10);
+                    let startVal = 0;
+                    const duration = 1500; // ms
+                    const startTime = performance.now();
+
+                    function animateCount(timestamp) {
+                        const progress = Math.min((timestamp - startTime) / duration, 1);
+                        const currentVal = Math.floor(progress * endVal);
+                        
+                        targetEl.textContent = currentVal + (endVal > 10 ? "+" : "");
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(animateCount);
+                        } else {
+                            targetEl.textContent = endVal + (endVal > 10 ? "+" : "");
+                        }
+                    }
+
+                    requestAnimationFrame(animateCount);
+                    observer.unobserve(targetEl);
+                }
+            });
+        }, {
+            threshold: 0.8
+        });
+
+        statsNums.forEach(el => countObserver.observe(el));
     }
 });
