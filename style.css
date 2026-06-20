@@ -1045,3 +1045,34 @@ a:hover { text-decoration: underline; }
     .hero-cta { flex-direction: column; }
     .btn-primary, .btn-outline { text-align: center; justify-content: center; }
 }
+
+/* Email Tooltip */
+.email-tooltip {
+    position: absolute;
+    background: var(--navy);
+    color: white;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-family: var(--font-sans);
+    border-radius: 4px;
+    pointer-events: none;
+    transform: translate(-50%, 10px);
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.email-tooltip.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+.email-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--navy);
+}
+

@@ -195,4 +195,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
+    // ===========================================
+    // 9. EMAIL COPY FALLBACK
+    // ===========================================
+    document.querySelectorAll('.email-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Prevent default mailto: action on systems without mail client
+            // We can let the user know we copied it. We don't call e.preventDefault()
+            // to allow normal mail client launch if configured, but we still copy it.
+            const email = 'mainak.skms@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                // Remove any existing tooltips
+                document.querySelectorAll('.email-tooltip').forEach(t => t.remove());
+
+                // Create a temporary tooltip/bubble
+                const tooltip = document.createElement('div');
+                tooltip.className = 'email-tooltip';
+                tooltip.textContent = 'Email copied to clipboard!';
+                document.body.appendChild(tooltip);
+
+                // Position tooltip near the clicked element
+                const rect = link.getBoundingClientRect();
+                tooltip.style.left = `${rect.left + window.scrollX + rect.width / 2}px`;
+                tooltip.style.top = `${rect.top + window.scrollY - 38}px`;
+
+                setTimeout(() => tooltip.classList.add('show'), 10);
+                setTimeout(() => {
+                    tooltip.classList.remove('show');
+                    setTimeout(() => tooltip.remove(), 250);
+                }, 2000);
+            });
+        });
+    });
+
 });
+
