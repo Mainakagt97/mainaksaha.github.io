@@ -1,321 +1,296 @@
-/* Custom Upgraded JS for Mainak Saha's Academic Profile */
+/**
+ * Mainak Saha — Academic Portfolio Script
+ * Features: Theme toggle, nav scroll, IntersectionObserver reveals,
+ * scrolling news duplication, publication filter+search, modal BibTeX cite
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================
-    // 1. Dark/Light Theme Switcher
-    // ==========================================
-    const themeToggle = document.getElementById('theme-toggle');
+    // =========================================
+    // 1. THEME TOGGLE
+    // =========================================
+    const themeBtn = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('ms-theme') || 'light';
     root.setAttribute('data-theme', savedTheme);
 
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = root.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+    themeBtn?.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('ms-theme', next);
     });
 
-    // ==========================================
-    // 2. Mobile Menu Navigation Toggler
-    // ==========================================
-    const mobileToggle = document.getElementById('mobile-toggle');
+    // =========================================
+    // 2. MOBILE NAV TOGGLE
+    // =========================================
+    const hamburger = document.getElementById('nav-hamburger');
     const navMenu = document.getElementById('nav-menu');
-    const navItems = document.querySelectorAll('.nav-item');
 
-    mobileToggle.addEventListener('click', () => {
-        mobileToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
+    hamburger?.addEventListener('click', () => {
+        navMenu?.classList.toggle('open');
     });
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            mobileToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+    // Close on nav link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu?.classList.remove('open');
         });
     });
 
-    // ==========================================
-    // 3. Typing Effect in Hero Section
-    // ==========================================
-    const typingSpan = document.querySelector('.typing-text');
-    const words = ["AI & Deep Learning", "Computer Vision", "Pattern Recognition", "Image Processing"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100;
+    // =========================================
+    // 3. ACTIVE NAV LINK ON SCROLL
+    // =========================================
+    const sections = document.querySelectorAll('section[id], .content-section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const NAV_HEIGHT = 52;
 
-    function typeEffect() {
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            typingSpan.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = 50;
-        } else {
-            typingSpan.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 120;
-        }
+    function setActiveNavLink() {
+        let currentId = '';
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= NAV_HEIGHT + 60) {
+                currentId = section.id;
+            }
+        });
 
-        if (!isDeleting && charIndex === currentWord.length) {
-            isDeleting = true;
-            typingSpeed = 1500; // Pause at end
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500; // Pause before typing next
-        }
-
-        setTimeout(typeEffect, typingSpeed);
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentId}`) {
+                link.classList.add('active');
+            }
+        });
     }
 
-    if (typingSpan) {
-        typeEffect();
-    }
+    window.addEventListener('scroll', setActiveNavLink, { passive: true });
+    setActiveNavLink();
 
-    // ==========================================
-    // 4. Scroll Reveal Animations (Intersection Observer)
-    // ==========================================
-    const revealElements = document.querySelectorAll('.reveal');
-    
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+    // =========================================
+    // 4. SCROLL REVEAL (IntersectionObserver)
+    // =========================================
+    const revealEls = document.querySelectorAll('.reveal, .tl-item, .research-card, .pub-entry, .highlight-card, .service-card, .skill-group, .exp-table-wrap, .contact-info-block, .contact-social-block, .pub-filters, .pub-search-wrap');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, idx) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
+                // Staggered delay based on position in a group
+                const siblings = Array.from(entry.target.parentElement?.children || []);
+                const i = siblings.indexOf(entry.target);
+                const delay = Math.min(i * 70, 350);
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, delay);
+                revealObserver.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1,
+        threshold: 0.08,
         rootMargin: '0px 0px -40px 0px'
     });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    revealEls.forEach(el => revealObserver.observe(el));
 
-    // ==========================================
-    // 5. Accordion Functional Elements (Workshops / FDPs)
-    // ==========================================
-    const accHeaders = document.querySelectorAll('.acc-header');
+    // =========================================
+    // 5. ANIMATED COUNTING STATS
+    // =========================================
+    function animateCount(el) {
+        const target = parseInt(el.getAttribute('data-val') || '0');
+        const duration = 1200;
+        const start = performance.now();
 
-    accHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const accItem = header.parentElement;
-            
-            document.querySelectorAll('.acc-item').forEach(item => {
-                if (item !== accItem) {
-                    item.classList.remove('active');
-                }
-            });
+        function update(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3); // cubic ease out
+            el.textContent = Math.round(eased * target);
+            if (progress < 1) requestAnimationFrame(update);
+            else el.textContent = target;
+        }
 
-            accItem.classList.toggle('active');
+        requestAnimationFrame(update);
+    }
+
+    const statEls = document.querySelectorAll('[data-val]');
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCount(entry.target);
+                statObserver.unobserve(entry.target);
+            }
         });
-    });
+    }, { threshold: 0.5 });
 
-    // ==========================================
-    // 6. Publications Hub Filter and Search Logic
-    // ==========================================
-    const pubSearch = document.getElementById('pub-search');
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const pubItems = document.querySelectorAll('.pub-item');
+    statEls.forEach(el => statObserver.observe(el));
 
-    let currentCategory = 'all';
+    // =========================================
+    // 6. DUPLICATE NEWS TRACK FOR INFINITE SCROLL
+    // =========================================
+    const newsTrack = document.getElementById('news-track');
+    if (newsTrack) {
+        const original = newsTrack.innerHTML;
+        newsTrack.innerHTML = original + original; // duplicate for seamless loop
+    }
+
+    // =========================================
+    // 7. PUBLICATIONS — TAB FILTER + SEARCH
+    // =========================================
+    const pubTabs = document.querySelectorAll('.pub-tab');
+    const pubEntries = document.querySelectorAll('.pub-entry');
+    const pubSearchInput = document.getElementById('pub-search');
+
+    let activeTab = 'all';
     let searchQuery = '';
 
     function filterPublications() {
-        pubItems.forEach(item => {
-            const category = item.getAttribute('data-category');
-            const title = item.querySelector('.pub-title').textContent.toLowerCase();
-            const authors = item.querySelector('.pub-authors').textContent.toLowerCase();
-            const venue = item.querySelector('.pub-venue').textContent.toLowerCase();
-            
-            const matchesCategory = (currentCategory === 'all' || category === currentCategory);
-            const matchesSearch = (title.includes(searchQuery) || authors.includes(searchQuery) || venue.includes(searchQuery));
+        let visible = 0;
+        const counts = { all: 0, journals: 0, conferences: 0, chapters: 0 };
 
-            if (matchesCategory && matchesSearch) {
-                item.style.display = 'flex';
-                item.style.animation = 'none';
-                item.offsetHeight; // trigger reflow
-                item.style.animation = 'fadeIn 0.4s ease';
-            } else {
-                item.style.display = 'none';
+        pubEntries.forEach(entry => {
+            const cat = entry.getAttribute('data-cat') || '';
+            const text = entry.textContent.toLowerCase();
+            const tabMatch = activeTab === 'all' || cat === activeTab;
+            const searchMatch = searchQuery === '' || text.includes(searchQuery);
+            const show = tabMatch && searchMatch;
+
+            entry.style.display = show ? '' : 'none';
+            if (show) {
+                counts.all++;
+                if (counts[cat] !== undefined) counts[cat]++;
+                if (!entry.classList.contains('visible')) {
+                    entry.classList.add('visible');
+                }
+                visible++;
             }
         });
+
+        // Update count badges
+        const countAll = document.getElementById('count-all');
+        const countJ = document.getElementById('count-journals');
+        const countC = document.getElementById('count-conferences');
+        const countCh = document.getElementById('count-chapters');
+        if (countAll) countAll.textContent = counts.all;
+        if (countJ) countJ.textContent = counts.journals;
+        if (countC) countC.textContent = counts.conferences;
+        if (countCh) countCh.textContent = counts.chapters;
     }
 
-    tabBtns.forEach(btn => {
+    pubTabs.forEach(btn => {
         btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
+            pubTabs.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            currentCategory = btn.getAttribute('data-tab');
+            activeTab = btn.getAttribute('data-tab') || 'all';
             filterPublications();
         });
     });
 
     let searchTimeout;
-    pubSearch.addEventListener('input', (e) => {
+    pubSearchInput?.addEventListener('input', (e) => {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
             searchQuery = e.target.value.toLowerCase().trim();
             filterPublications();
-        }, 150);
+        }, 200);
     });
 
-    // ==========================================
-    // 7. Contact Email Client Composer
-    // ==========================================
-    const contactForm = document.getElementById('contact-form');
+    filterPublications(); // initial run
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+    // =========================================
+    // 8. BIBTEX CITATION MODAL
+    // =========================================
+    const modal = document.getElementById('cite-modal');
+    const modalBibtex = document.getElementById('modal-bibtex-content');
+    const modalClose = document.getElementById('modal-close');
+    const modalCopyBtn = document.getElementById('modal-copy');
 
-            const emailTo = 'mainak.skms@gmail.com';
-            const emailSubject = encodeURIComponent(`[Portfolio Query] ${subject}`);
-            const emailBody = encodeURIComponent(
-                `Hello Mainak,\n\nMy name is ${name}.\n\nMessage:\n${message}\n\nBest Regards,\n${name}`
-            );
+    function openModal(bibtex) {
+        if (!modal || !modalBibtex) return;
+        modalBibtex.textContent = bibtex.trim();
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
 
-            window.location.href = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
+    function closeModal() {
+        modal?.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    // Attach to all cite buttons (publications + highlights)
+    document.querySelectorAll('.pub-cite-btn, .btn-cite-trigger, .hl-cite-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const bibtex = btn.getAttribute('data-bibtex') || '';
+            openModal(bibtex);
         });
-    }
-
-    // ==========================================
-    // 8. Academic Ticker Infinite Loop Cloning
-    // ==========================================
-    const tickerTrack = document.getElementById('ticker-track');
-    if (tickerTrack) {
-        const items = Array.from(tickerTrack.children);
-        
-        items.forEach(item => {
-            const clone = item.cloneNode(true);
-            tickerTrack.appendChild(clone);
-        });
-
-        items.forEach(item => {
-            const clone = item.cloneNode(true);
-            tickerTrack.appendChild(clone);
-        });
-    }
-
-    // ==========================================
-    // 9. BibTeX Citation Modal & Copy to Clipboard
-    // ==========================================
-    const citeModal = document.getElementById('cite-modal');
-    const modalCloseBtn = document.getElementById('modal-close-btn');
-    const bibtexCodeContent = document.getElementById('bibtex-code-content');
-    const copyBibtexBtn = document.getElementById('copy-bibtex-btn');
-    
-    const citeButtons = document.querySelectorAll('.btn-cite, .btn-cite-trigger');
-
-    function openCiteModal(bibtexData) {
-        bibtexCodeContent.textContent = bibtexData.trim();
-        citeModal.classList.add('active');
-        citeModal.setAttribute('aria-hidden', 'false');
-    }
-
-    function closeCiteModal() {
-        citeModal.classList.remove('active');
-        citeModal.setAttribute('aria-hidden', 'true');
-        
-        const copyText = copyBibtexBtn.querySelector('span');
-        const successIcon = copyBibtexBtn.querySelector('.copy-success-icon');
-        copyText.textContent = "Copy Code";
-        successIcon.style.display = "none";
-    }
-
-    // Use event delegation or loop to bind cite triggers
-    document.addEventListener('click', (e) => {
-        const target = e.target;
-        if (target.classList.contains('btn-cite') || target.classList.contains('btn-cite-trigger')) {
-            e.stopPropagation();
-            const bibtex = target.getAttribute('data-bibtex');
-            if (bibtex) {
-                openCiteModal(bibtex);
-            }
-        }
     });
 
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', closeCiteModal);
-    }
+    modalClose?.addEventListener('click', closeModal);
 
-    if (citeModal) {
-        citeModal.addEventListener('click', (e) => {
-            if (e.target === citeModal) {
-                closeCiteModal();
-            }
-        });
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && citeModal.classList.contains('active')) {
-                closeCiteModal();
-            }
-        });
-    }
+    modal?.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
 
-    if (copyBibtexBtn) {
-        copyBibtexBtn.addEventListener('click', () => {
-            const codeText = bibtexCodeContent.textContent;
-            navigator.clipboard.writeText(codeText).then(() => {
-                const copyText = copyBibtexBtn.querySelector('span');
-                const successIcon = copyBibtexBtn.querySelector('.copy-success-icon');
-                
-                copyText.textContent = "Copied!";
-                successIcon.style.display = "inline-block";
-                
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // Copy bibtex to clipboard
+    modalCopyBtn?.addEventListener('click', () => {
+        const text = modalBibtex?.textContent || '';
+        navigator.clipboard.writeText(text).then(() => {
+            if (modalCopyBtn) {
+                const orig = modalCopyBtn.textContent;
+                modalCopyBtn.textContent = '✓ Copied!';
+                modalCopyBtn.classList.add('copied');
                 setTimeout(() => {
-                    copyText.textContent = "Copy Code";
-                    successIcon.style.display = "none";
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
+                    modalCopyBtn.textContent = orig;
+                    modalCopyBtn.classList.remove('copied');
+                }, 2200);
+            }
+        }).catch(() => {
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            modalCopyBtn.textContent = '✓ Copied!';
+            setTimeout(() => { modalCopyBtn.textContent = 'Copy to Clipboard'; }, 2000);
         });
-    }
+    });
 
-    // ==========================================
-    // 10. Smooth Stats Counter Animation
-    // ==========================================
-    const statsNums = document.querySelectorAll('.stat-num');
-    
-    if (statsNums.length > 0) {
-        const countObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const targetEl = entry.target;
-                    const endVal = parseInt(targetEl.getAttribute('data-val'), 10);
-                    let startVal = 0;
-                    const duration = 1500; // ms
-                    const startTime = performance.now();
-
-                    function animateCount(timestamp) {
-                        const progress = Math.min((timestamp - startTime) / duration, 1);
-                        const currentVal = Math.floor(progress * endVal);
-                        
-                        targetEl.textContent = currentVal + (endVal > 10 ? "+" : "");
-                        
-                        if (progress < 1) {
-                            requestAnimationFrame(animateCount);
-                        } else {
-                            targetEl.textContent = endVal + (endVal > 10 ? "+" : "");
-                        }
-                    }
-
-                    requestAnimationFrame(animateCount);
-                    observer.unobserve(targetEl);
-                }
-            });
-        }, {
-            threshold: 0.8
+    // =========================================
+    // 9. SMOOTH SCROLL OFFSET FIX FOR NAV
+    // =========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const top = target.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT - 12;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
         });
+    });
 
-        statsNums.forEach(el => countObserver.observe(el));
-    }
+    // =========================================
+    // 10. INSTITUTION BANNER HIDE ON SCROLL
+    // =========================================
+    const instBanner = document.getElementById('institution-banner');
+    let lastScrollY = 0;
+
+    window.addEventListener('scroll', () => {
+        if (!instBanner) return;
+        const scrollY = window.scrollY;
+        if (scrollY > 80) {
+            instBanner.style.transform = 'translateY(-100%)';
+            instBanner.style.transition = 'transform 0.3s ease';
+        } else {
+            instBanner.style.transform = 'translateY(0)';
+        }
+        lastScrollY = scrollY;
+    }, { passive: true });
+
 });
